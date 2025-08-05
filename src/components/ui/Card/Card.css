@@ -1,0 +1,89 @@
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-fast);
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+}
+
+/* Variantes */
+.card--default {
+  border: 1px solid var(--color-gray-200);
+}
+
+.card--elevated {
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-100);
+}
+
+.card--outlined {
+  border: 2px solid var(--color-gray-300);
+}
+
+.card--ghost {
+  background-color: transparent;
+  border: none;
+}
+
+/* Padding */
+.card--padding-none {
+  padding: 0;
+}
+
+.card--padding-sm {
+  padding: var(--spacing-4);
+}
+
+.card--padding-md {
+  padding: var(--spacing-6);
+}
+
+.card--padding-lg {
+  padding: var(--spacing-8);
+}
+
+.card--padding-xl {
+  padding: var(--spacing-10);
+}
+
+/* Estados interactivos */
+.card--hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card--clickable {
+  cursor: pointer;
+}
+
+.card--clickable:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.card--clickable:active {
+  transform: translateY(0);
+}
+
+/* Contenido del card */
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+  margin: 0 0 var(--spacing-3) 0;
+  color: var(--color-gray-900);
+}
+
+.card p {
+  margin: 0 0 var(--spacing-4) 0;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
