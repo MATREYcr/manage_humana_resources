@@ -80,7 +80,7 @@ export const MainLayout = () => {
       >
         {/* Logo del sidebar */}
         <div style={{
-          height: 64,
+          height: 65,
           display: 'flex',
           alignItems: 'center',
           justifyContent: collapsed ? 'center' : 'flex-start',
@@ -131,11 +131,11 @@ export const MainLayout = () => {
             
             {/* Usuario y notificaciones */}
             <Space size="large">
-              <Badge count={5}>
+              <Badge count={5} >
                 <AntButton 
                   type="text" 
                   icon={<BellOutlined />} 
-                  size="large"
+                  size="middle"
                   onClick={() => navigate(ROUTES.NOTIFICATIONS)}
                 />
               </Badge>
@@ -147,9 +147,8 @@ export const MainLayout = () => {
               >
                 <Space style={{ cursor: 'pointer', padding: '8px' }}>
                   <Avatar icon={<UserOutlined />} />
-                  <div style={{ display: collapsed ? 'none' : 'block' }}>
+                  <div style={{ display: collapsed ? 'none' : 'flex' , flexDirection: 'column'}}>
                     <Text strong>{user?.name || 'Usuario'}</Text>
-                    <br />
                     <Text type="secondary" style={{ fontSize: '12px' }}>
                       {user?.role || 'Empleado'}
                     </Text>
